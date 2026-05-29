@@ -1,0 +1,294 @@
+/* 
+   ARQUIVO DE ESTILOS - ALMANAQUE BIOTÔNICO FONTOURA 1977
+   Reutilizando as classes obrigatórias da AV1 de Carol
+*/
+
+/* Reset básico de margens e preenchimentos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo da página */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf5e6; /* Cor de papel envelhecido para o tema vintage */
+    color: #333;
+    transition: background-color 0.5s ease;
+}
+
+/* Banner principal do topo - Classe da AV1 */
+.sc_caroline_banner {
+    width: 100%;
+    height: 85vh; /* aumenta a área visível */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagem grande do banner - Classe da AV1 */
+.sc_caroline_banner_img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* SOBE A ANDRESSA */
+    object-position: center top;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    filter: sepia(0.3);
+}
+
+/* Ajuste de responsividade para celulares */
+@media (max-width: 600px) {
+    .sc_caroline_banner {
+        height: 45vh;
+    }
+
+    .sc_caroline_banner_img{
+        object-position: center top;
+    }
+}
+
+/* Camada escura sobre a imagem - Classe da AV1 */
+.sc_caroline_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-bottom: 5px;
+
+}
+
+/* Título principal no banner - Classe da AV1 */
+.sc_caroline_titulo{
+    color: #ffcc00;
+    font-size: 4rem;
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+
+    font-weight: bold;
+}
+
+/* Subtítulo no banner - Classe da AV1 */
+.sc_caroline_subtitulo{
+    color: white;
+    font-size: 1.4rem;
+
+    text-align: center;
+
+    width: 80%;
+    max-width: 700px;
+
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+/* Container que organiza os cards - Classe da AV1 */
+.sc_caroline_cards_container{
+    width: 90%;
+    margin: 60px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+/* Card individual - Classe da AV1 */
+.sc_caroline_card{
+    width: 280px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    transition: 0.4s;
+
+    cursor: pointer;
+
+    border: 2px solid #e0c097;
+}
+
+/* Efeito de levitação ao passar o mouse - Classe da AV1 */
+.sc_caroline_card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Imagem dentro do card - Classe da AV1 */
+.sc_caroline_card_img{
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+/* Conteúdo de texto do card - Classe da AV1 */
+.sc_caroline_card_conteudo{
+    padding: 20px;
+}
+
+/* Título dentro dos cards */
+.sc_caroline_card_conteudo h2{
+    margin-bottom: 12px;
+
+    color: #8b0000;
+
+    font-size: 1.5rem;
+}
+
+/* Texto descritivo dos cards */
+.sc_caroline_card_conteudo p{
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: #555;
+}
+
+/* Área de destaque com botão - Classe da AV1 */
+.sc_caroline_texto{
+    width: 100%;
+
+    padding: 100px 20px;
+
+    background: linear-gradient(135deg, #8b0000, #b22222);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+/* Título da seção central */
+.sc_caroline_texto h2{
+    font-size: 2.5rem;
+
+    max-width: 800px;
+
+    margin-bottom: 30px;
+}
+
+/* Estilo do botão */
+#sc_caroline_btn_transformar {
+    padding: 15px 40px;
+
+    font-size: 1.2rem;
+
+    background-color: #ffcc00;
+    color: #8b0000;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#sc_caroline_btn_transformar:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* Rodapé da página - Classe da AV1 */
+.sc_caroline_footer{
+    background: #222;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+/* Texto do rodapé */
+.sc_caroline_footer p{
+    color: #aaa;
+
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+}
+
+/* TEMA ALTERNATIVO */
+.sc_caroline_mulher_gato{
+    background-color: #1a1a1a;
+    color: #eee;
+}
+
+.sc_caroline_mulher_gato .sc_caroline_card{
+    background: #333;
+    color: white;
+    border-color: #ffcc00;
+}
+
+.sc_caroline_mulher_gato .sc_caroline_card_conteudo p{
+    color: #ccc;
+}
+
+.sc_caroline_mulher_gato .sc_caroline_card_conteudo h2{
+    color: #ffcc00;
+}
+
+/* Responsividade */
+@media(max-width: 900px){
+
+    .sc_caroline_titulo{
+        font-size: 3rem;
+    }
+
+    .sc_caroline_texto h2{
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 600px){
+
+    .sc_caroline_banner{
+        height: 55vh;
+    }
+
+    .sc_caroline_titulo{
+        font-size: 2.2rem;
+        padding: 0 10px;
+    }
+
+    .sc_caroline_subtitulo{
+        font-size: 1rem;
+    }
+
+    .sc_caroline_card{
+        width: 100%;
+    }
+}
